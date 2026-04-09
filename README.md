@@ -8,13 +8,6 @@
   <strong>Discover, Review & Reserve — Your Complete Dining Companion</strong>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white" alt="MySQL">
-  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap">
-  <img src="https://img.shields.io/badge/XAMPP-FB7A24?logo=xampp&logoColor=white" alt="XAMPP">
-</p>
-
 ---
 
 ## 📖 About
