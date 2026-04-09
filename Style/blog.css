@@ -1,0 +1,417 @@
+/* --- Global & Base Styles --- */
+body {
+    font-family: Arial, sans-serif; /* Consistent font */
+    color: #3f3f3f; /* Dark text for light sections */
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+/* --- Navigation & Header Consistency --- */
+.navbar-logo {
+    height: 40px;   
+    width: auto;       
+    object-fit: contain;
+}
+
+
+.navbar-nav .nav-item {
+    margin-right: 1.5rem;
+}
+
+.btn-login-custom {
+    background-color: #3f3f3f;
+    color: #ffffff;
+    border: 2px solid #5a5a5a;
+    border-radius: 10px;
+    padding: 8px 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-login-custom:hover {
+    background-color: #5a5a5a;
+    border-color: #777;
+}
+
+.btn-reserve-custom {
+    background-color: #ff5733; /* Primary Accent Color */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 20px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-reserve-custom:hover {
+    background-color: #e64d2d;
+}
+
+.btn-reserve-custom:active {
+    box-shadow: 0 2px #c33a1e;
+    transform: translateY(3px);
+}
+
+/* --- Hero Section (Index Page) --- */
+.hero-section {
+    background-color: #f8f9fa; /* Light background for the hero */
+}
+
+.hero-text-content {
+    padding: 40px 0;
+}
+
+.hero-headline {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c2c2c;
+}
+
+.hero-image-wrapper {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-explore,
+.btn-learn-more {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.btn-explore {
+    background-color: #ff5733; /* Accent Color */
+    color: #ffffff;
+    border: none;
+}
+
+.btn-learn-more {
+    background-color: transparent;
+    border: 2px solid #2c2c2c;
+    color: #2c2c2c;
+}
+
+/* --- Features Section (Index Page) --- */
+.features-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.feature-card {
+    border-radius: 10px;
+    padding: 30px;
+    color: white; /* Default text color for cards */
+    min-height: 250px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .card-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.feature-card .card-headline {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Specific Card Styling (Using gradients or solid colors) */
+.card-reviews {
+    background-color: #3f3f3f; /* Dark background */
+}
+
+.card-reservations {
+    background-color: #ff5733; /* Accent background */
+}
+
+.card-ratings {
+    background-color: #2c2c2c; /* Navbar dark background */
+}
+
+
+/* --- Customer Stories (Index Page) --- */
+.customer-stories-section {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.customer-stories-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-height: 220px;
+}
+
+.review-rating {
+    color: #ffc107; /* Star rating color */
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.review-text {
+    font-style: italic;
+    color: #555;
+}
+
+/* --- Contact/Sign Up Section (Index Page) --- */
+.contact-us-section {
+    padding: 80px 0;
+}
+
+.email-input-custom {
+    max-width: 400px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+}
+
+.btn-signup {
+    background-color: #ff5733; /* Accent Color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+}
+
+/* --- Team Section (Index Page) --- */
+.team-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.team-profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #ff5733; /* Accent border */
+}
+
+.team-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+}
+
+.team-role {
+    color: #ff5733; /* Accent role */
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.team-description {
+    max-width: 300px;
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    color: #3f3f3f;
+    font-size: 1.3rem;
+    margin: 0 8px;
+}
+
+.social-links a:hover {
+    color: #ff5733; /* Accent hover */
+}
+
+.btn-positions {
+    background-color: #3f3f3f;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.2s;
+    margin-top: 20px;
+}
+
+.btn-positions:hover {
+    background-color: #5a5a5a;
+}
+
+
+
+/* --- Blog Specific Styles (Blog Page) --- */
+.blog-header-section {
+    background-color: #3f3f3f; /* Slightly lighter dark color for the section */
+    color: #ffffff;
+    padding: 60px 0;
+}
+
+.blog-post-card {
+    
+    background-color: #ffffff; 
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+/* .blog-post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+} */
+
+.blog-post-card h3 {
+    color: #2c2c2c;
+    font-weight: bold;
+}
+
+.blog-post-card h3, 
+.blog-post-card p, 
+.blog-post-card .post-meta {
+    color: #3f3f3f; /* Dark text color */
+}
+
+.read-more-link {
+    color: #ff5733; /* Use the primary accent color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more-link:hover {
+    color: #c33a1e;
+}
+
+/* Style for Sidebar Categories (Blog Page) */
+.bg-light h4 {
+    color: #3f3f3f;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.bg-light a {
+    color: #2c2c2c;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bg-light a:hover {
+    color: #ff5733; /* Accent hover */
+}
+
+/* Style for Pagination */
+.pagination .page-item .page-link {
+    color: #2c2c2c;
+    border-color: #ddd;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #ff5733;
+    border-color: #ff5733;
+    color: #ffffff;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    background-color: #f0f0f0;
+}
+
+.footer-section{
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size:0.95rem;
+}
+
+.footer-logo{
+    height: 35px;
+    width: auto; 
+}
+
+ .footer-links-minimal .footer-link-minimal {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 10px; /* Space between links */
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.footer-link-minimal .list-inline-item{
+    border-right: none;
+    content: none;
+    padding: 0 10px;
+
+}
+
+
+.footer-links-minimal .footer-link-minimal:hover {
+    color: #ff5733; /* Highlight color on hover */
+}
+
+.social-links-footer{
+    font-size: 1.5rem;
+    /* color: #ffffff; */
+    margin-left: 15px;
+    transform: color 0.2s;
+}
+
+.social-links-footer a{
+    margin: 0 10px;
+    line-height: 1;
+    font-size: 15px;
+}
+.social-links-footer a:hover {
+    color: #ff5733; /* Highlight color on hover */
+}
+
+.footer-full-divider{
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+}
+/* --- MOBILE ADAPTATIONS --- */
+@media (max-width: 991.98px) {
+    /* Footer Section: Center align and handle stacking */
+    /* text-center on .col-12 is handled in HTML now, but this selector is fine for additional styling */
+    .footer-section .col-12 {
+        text-align: center !important; 
+    }
+    /* Add space between stacked columns (Logo, Links, Social) */
+    .footer-section .row > div {
+        margin-bottom: 15px; 
+    }
+    .footer-section .row > div:last-child {
+        margin-bottom: 0; 
+    }
+    
+    .footer-links-minimal .footer-link-minimal {
+        padding: 5px 0; /* Add vertical padding for easier tapping */
+    }
+    
+    .social-links-footer {
+        justify-content: center;
+    }
+}

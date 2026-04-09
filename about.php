@@ -1,0 +1,166 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+     rel="stylesheet"/>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="Style/about.css">
+     <style>
+        .btn-login-custom{
+            background-color: #3f3f3f;
+            color: #ffffff;
+            border: 2px solid #5a5a5a;
+            border-radius: 10px;
+            padding:8px 20px;
+        }
+
+        .btn-reserve-custom{
+            background-color: #ff5733;
+            color: #ffffff;
+            
+            border: none;
+            border-radius: 10px;
+            padding:8px 20px;
+        }
+
+        .btn-reserve-custom:active{
+            box-shadow: 0 2px #c33a1e;
+            transform: translateY(3px);
+        }
+
+        .dropdown-men-dark-custom{
+            background-color: #3f3f3f;
+            border:1px solid #5a5a5a;
+        }
+
+        .dropdown-men-dark-custom .dropdown-item{
+            color: #ffffff;
+        }
+
+        .dropdown-men-dark-custom .dropdown-item:hover{
+            background-color: #5a5a5a;
+        }
+        .navbar-logo{
+            max-height: 40px;
+            height: auto;
+            width: 150px;
+        }
+        .navbar-nav .nav-item{
+            margin-right:1.5rem;
+        }
+     </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c2c2c;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <img src="assets/DineReview_Logo.png" alt="DineReview_Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white" href="reviews.php">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="restaurants.php">Restaurants</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="reservations.php">Reservations</a></li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <?php if (isset($_SESSION['user_name'])): ?>
+                        <a href="profile.php" class="text-white me-3 text-decoration-none fw-semibold">
+                            Hello, <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+                        </a>
+                        <a href="auth/logout.php"
+                            class="btn btn-sm btn-outline-light"
+                            onclick="return confirm('Are you sure you want to log out?');">
+                            Logout
+                        </a>
+                    <?php else: ?>
+                        <button class="btn-login-custom me-2" onclick="window.location.href='login.html'" type="button">Login</button>
+                        <button class="btn-reserve-custom" onclick="window.location.href='signup.html'" type="button">Sign Up</button>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="about-section">
+        <div class="container">
+            <div class="main-content text-center">
+                
+                <h1 class="display-4 fw-bold mb-4">Our Vision: Dining Made Effortless</h1>
+                <p class="lead mb-5">We are passionate food lovers building the future of dining discovery.</p>
+                
+                <p class="about-text text-start">
+                    DineReview was founded on a simple belief: finding and booking a table should be as enjoyable as the meal itself. Tired of outdated websites and confusing reservation systems, our team came together to craft a seamless, intuitive platform that values transparency and user experience.
+                </p>
+                
+                <p class="about-text text-start">
+                    We believe authentic user experiences-from restaurant reviews to simple, fast table reservations-are the key to a great night out. Our focus is on providing reliable data and a beautiful interface, ensuring your perfect dining experience is just a few taps away.
+                </p>
+
+                <div class="mt-3">
+                    <a href="index.php" class="btn btn-sm btn-dark me-2">Back to Home<span aria-hidden="true">&rsaquo;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer-section">
+        <div class="container py-4">
+            
+            <div class="row align-items-center">
+                
+                <div class="col-4 text-start"> 
+                    <a class="footer-logo" href="index.php">
+                        <img src="assets/DineReview_Logo.png" alt="DineReview Logo" class="footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-4 text-center">
+                    <ul class="list-inline footer-links-minimal m-0 d-flex justify-content-center"> 
+                        <li class="list-inline-item"><a href="about.php" class="footer-link-minimal">About Us</a></li>
+                        <li class="list-inline-item"><a href="positions.php" class="footer-link-minimal">Careers</a></li>
+                        <li class="list-inline-item"><a href="contact.php" class="footer-link-minimal">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-12 col-md-4 text-end"> 
+                    <div class="social-links-footer">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <hr class="footer-divider my-3">
+            
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-copyright m-0">&copy; 2025 DineReview. All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

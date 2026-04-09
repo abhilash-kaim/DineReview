@@ -1,0 +1,520 @@
+/*
+File: style.css
+Purpose: Global styling for navigation, layout, and components
+*/
+/* --- GLOBAL STYLES --- */
+.main-content-border{
+    border: 1px solid #ffffff;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.hero-section{
+    background-color: #733B32;
+    padding: 40px 0; /* Increased padding slightly for consistency */
+    overflow: hidden;
+}
+
+.hero-text-content{
+    color: #ffffff;
+   padding: 20px;
+}
+
+.hero-headline{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-image-wrapper{
+   width: 100%;
+   height: 100%;
+   margin: 0;
+    padding: 0;
+}
+
+.hero-image{
+    display: block;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:0;
+}
+
+/* Explore Button (Bright Orange) */
+.btn-explore{
+    background-color: #ff5733;
+    color: #ffffff;
+    box-shadow: 0 3px #c33a1e;
+    border: none;
+    border-radius: 50px;
+    padding:8px 20px;
+}
+
+/* Learn More Button (Dark Gray) */
+.btn-learn-more{
+   background-color:transparent;
+    color: #ffffff;
+    box-shadow: 0 2px #5a5a5a;
+    border: 2px solid #5a5a5a;
+    border-radius: 50px;
+    padding:8px 20px;
+}
+
+.hero-wrapper,
+.hero-wrapper .row,
+.hero-wrapper .row .col-lg-6{
+    height: 100%;
+    min-height: 100%;
+}
+
+/* --- FEATURES SECTION --- */
+
+.features-section{
+    /* Darker background color from the image */
+    background-color: #1c1c1c; 
+    padding: 80px 0;
+    color:#f0f0f0
+}
+
+.feature-card{
+    /* **CRITICAL FIX: Start content at the top** */
+    justify-content: flex-start; 
+    
+    /* Adjusted padding: More at the top (40px) and bottom (25px) */
+    padding-top: 30px; 
+    padding-right: 30px; 
+    padding-bottom: 20px; 
+    padding-left: 30px; 
+    
+    margin-bottom: 0; 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+    border-radius: 15px; /* Keep circular corners */
+}
+
+
+
+/*STYLING FOR THE RECTANGLE CARD (Card 1: col-lg-6) */
+.card-wide {
+    min-height: 350px; 
+}
+
+/*STYLING FOR THE SQUARE CARDS (Card 2 & 3: col-lg-3) */
+.card-square {
+    /* Set height equal to the rectangle's height to maintain alignment */
+    min-height: 350px;
+}
+
+.customer-card-square{
+    min-height: 250px;
+}
+/* Card Specific Styles (Backgrounds and Visuals) */
+
+.card-reviews{
+    background-color: #2e5c54;
+    background-image: url('bg-review.jpg'); 
+    background-size: cover;
+    background-position: center bottom;
+    background-blend-mode: multiply; 
+}
+.card-reservations{
+    background-color: #92733b; 
+    background-image: url('bg-reservations.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+.card-ratings{
+    background-color: #2a5a6a;
+    background-image: url('bg-ratings.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+
+/* styling for the feature icons */
+.features-icon{
+    position: absolute;
+    top: 30px; 
+    right: 30px; 
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.card-title{
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0.75;
+    margin-bottom: 5px;
+}
+
+.card-headline{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 10px; 
+    margin-bottom: 20px;  
+}
+
+
+
+/* === BUTTON STYLING (Subtle/Cylindrical Look) === */
+.feature-card .btn-dark,
+.feature-card .btn-outline-dark,
+.feature-card .btn-light {
+    /* Subtle, translucent background */
+    background-color: rgba(255, 255, 255, 0.1) !important; 
+    color: #ffffff !important;
+    /* Light outline border */
+    border: 1px solid rgba(255, 255, 255, 0.6) !important; 
+    /* Cylindrical shape */
+    border-radius: 50px; 
+    padding: 8px 15px;
+    font-weight: 500;
+    display: inline-flex; 
+    align-items: center;
+}
+
+.feature-card .btn-dark span,
+.feature-card .btn-outline-dark span,
+.feature-card .btn-light span {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* Customer stories Section */
+
+.customer-stories-section{
+    background-color: #733B32;
+    padding: 80px 0;
+    color:#ffffff;
+}
+
+.customer-stories-card{
+    justify-content: flex-start;
+    padding-top: 30px; 
+    padding-right: 30px; 
+    padding-bottom: 20px; 
+    padding-left: 30px; 
+    margin-bottom: 0; 
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); 
+    border-radius: 15px;
+
+}
+
+.review-rating{
+    color:gold;
+    font-size:1.2rem;
+
+}
+.review-text{
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.customer-info .card-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.customer-info .small{
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.contact-us-section{
+    background-color: #1c1c1c; 
+    padding: 80px 0;
+    color:#f0f0f0
+}
+
+/* Email input field styling */
+.email-input-custom{
+    max-width: 350px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    color:black; 
+    border-radius: 10px;
+    font-size:1rem;
+    padding-left: 20px;
+}
+
+.btn-signup{
+   background-color:#ffffff;
+    color: black;
+    box-shadow: 0 2px #5a5a5a;
+    border: 2px solid #5a5a5a;
+    border-radius: 10px;
+    padding:6px 18px;
+}
+.btn-positions{
+    background-color:transparent;
+    color: #ffffff;
+    box-shadow: 0 1px #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding:10px 15px;
+    max-width: 190px;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}    
+
+.team-section{
+    background-color: #733B32;
+    padding: 80px 0;
+    color:#ffffff;
+    text-align: center;
+}
+
+.team-profile-img{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.team-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team-role{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.team-description{
+    max-width: 300px;
+    margin-bottom: 25px;
+    font-size:0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-links{
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: 0 8px;
+    opacity: 0.7;
+    transition:opacity 0.2s;
+}
+
+.social-links a{
+    margin: 0 15px;
+}
+
+.footer-section{
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size:0.95rem;
+}
+
+.footer-logo{
+    height: 35px;
+    width: auto; 
+}
+
+ .footer-links-minimal .footer-link-minimal {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 10px; /* Space between links */
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.footer-link-minimal .list-inline-item{
+    border-right: none;
+    content: none;
+    padding: 0 10px;
+
+}
+
+
+.footer-links-minimal .footer-link-minimal:hover {
+    color: #ff5733; /* Highlight color on hover */
+}
+
+.social-links-footer{
+    font-size: 1.5rem;
+    margin-left: 15px;
+    transform: color 0.2s;
+}
+
+.social-links-footer a{
+    margin: 0 10px;
+    line-height: 1;
+    font-size: 15px;
+}
+.social-links-footer a:hover {
+    color: #ff5733; /* Highlight color on hover */
+}
+
+.footer-full-divider{
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+}
+
+/* --- MOBILE ADAPTATIONS --- */
+@media (max-width: 991.98px) {
+    
+    .hero-section {
+        padding: 30px 0; /* Increased padding slightly for better spacing on mobile */
+    }
+    
+    .hero-text-content {
+        padding: 30px 20px;
+        text-align: center; 
+    }
+
+    .hero-headline {
+        font-size: 2.2rem; /* Adjusted for even better fit on small phones */
+        text-align: center;
+    }
+    
+    /* Make the explore buttons center on mobile */
+    .hero-text-content .btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    /* Separate the two buttons slightly on mobile */
+    .hero-text-content .btn-explore {
+        margin-right: 15px;
+    }
+
+
+    /* Feature Cards: Reduce height constraints on mobile when they stack */
+    .card-wide, .card-square {
+        min-height: 250px; 
+    }
+    .card-headline {
+        font-size: 2rem; /* Smaller headline in cards for mobile */
+    }
+    
+    /* Contact Section: Styling to force stacking and full width on mobile */
+    .contact-us-section form {
+           max-width: 350px;
+           margin-left: auto;
+           margin-right: auto;
+           flex-direction: column;
+    }
+    
+    .email-input-custom {
+       margin-right: 0;
+       margin-bottom: 10px;
+       width: 100%;
+    }
+
+    .btn-signup {
+        width: 50%;
+        max-width: 250px; /* Constrain the width of the button to look better */
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Footer Section: Center align and handle stacking */
+    .footer-section .col-12 {
+        text-align: center !important; 
+    }
+    /* Add space between stacked columns (Logo, Links, Social) */
+    .footer-section .row > div {
+        margin-bottom: 15px; 
+    }
+    .footer-section .row > div:last-child {
+        margin-bottom: 0; 
+    }
+    
+   
+    .footer-links-minimal .footer-link-minimal {
+        padding: 5px 0; /* Add vertical padding for easier tapping */
+    }
+    
+    .social-links-footer {
+        justify-content: center;
+    }
+}
+
+.navbar {
+    min-height: 64px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Navbar logo */
+.navbar-logo {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.custom-navbar {
+    background-color: #2c2c2c;
+}
+
+
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+
+.page-brown-section {
+    background-color: #733B32;
+    min-height: calc(100vh - 64px); /* full page minus navbar */
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.compact-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+/* Logo sizing within the navbar */
+        .navbar-logo{
+            max-height: 40px;
+            height: auto;
+            width: 150px;
+        }
+        /* Spacing between navbar items */
+        .navbar-nav .nav-item{
+            margin-right:1.5rem;
+        }
