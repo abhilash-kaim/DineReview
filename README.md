@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/DineReview_Logo.png" alt="DineReview Logo" width="300">
-</p>
+
 
 <h1 align="center">DineReview</h1>
 
@@ -110,92 +108,6 @@ DineReview/
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [XAMPP](https://www.apachefriends.org/) (Apache + MySQL)
-- PHP 8.x
-- A modern web browser
-
-### Installation
-
-1. **Clone the repository** into your XAMPP `htdocs` directory:
-
-   ```bash
-   cd C:/xampp/htdocs
-   git clone https://github.com/abhilash-kaim/DineReview.git
-   ```
-
-2. **Configure the database connections:**
-
-   Copy the example config files and fill in your credentials:
-
-   ```bash
-   cp config/db.example.php config/db.php
-   cp config/db_reviews.example.php config/db_reviews.php
-   ```
-
-   Edit each file with your MySQL credentials:
-
-   ```php
-   <?php
-   $host     = "localhost";
-   $user     = "root";          // your MySQL username
-   $password = "";              // your MySQL password
-   $database = "dinereview";    // your database name
-   ?>
-   ```
-
-3. **Create the MySQL databases and tables:**
-
-   Open **phpMyAdmin** (`http://localhost/phpmyadmin`) and create the required database(s). Then create the following tables:
-
-   **`users` table:**
-   ```sql
-   CREATE TABLE users (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       name VARCHAR(100) NOT NULL,
-       email VARCHAR(100) UNIQUE NOT NULL,
-       password VARCHAR(255) NOT NULL
-   );
-   ```
-
-   **`reviews` table:**
-   ```sql
-   CREATE TABLE reviews (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       user_id INT NOT NULL,
-       restaurant_name VARCHAR(150) NOT NULL,
-       rating INT NOT NULL,
-       review_text TEXT NOT NULL,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-   ```
-
-   **`reservations` table:**
-   ```sql
-   CREATE TABLE reservations (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       user_id INT NOT NULL,
-       restaurant_name VARCHAR(150) NOT NULL,
-       reservation_date DATE NOT NULL,
-       reservation_time TIME NOT NULL,
-       guests INT NOT NULL,
-       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-   );
-   ```
-
-4. **Start XAMPP** and ensure both **Apache** and **MySQL** are running.
-
-5. **Open the app** in your browser:
-
-   ```
-   http://localhost/DineReview/
-   ```
-
----
-
 ## 🖥️ Pages Overview
 
 | Page | URL | Description |
@@ -213,28 +125,9 @@ DineReview/
 
 ---
 
-## 👥 Team
-
-| Name | Role |
-|---|---|
-| **Syed Faiz** | Project Manager |
-| **Abhilash Kaim** | Design Lead |
-| **Khaja Akrama Jasser** | Lead Data Engineer / Analyst |
-| **Nithin Kumar Bomma** | Lead Developer |
-
----
-
 ## 🔒 Security Notes
 
 - Database credentials (`config/db.php`, `config/db_reviews.php`) are excluded from version control via `.gitignore`.
 - User authentication is handled through PHP sessions and cookies.
 - SQL injection is mitigated using **MySQLi prepared statements** across all database queries.
 - Output is sanitized with `htmlspecialchars()` to prevent XSS attacks.
-
----
-
-## 📄 License
-
-This project was developed as part of the **SEWA (Software Engineering for Web Applications)** module at **Griffith College Dublin**.
-
-© 2025 DineReview. All rights reserved.
