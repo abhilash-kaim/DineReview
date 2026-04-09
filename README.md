@@ -12,8 +12,6 @@
 
 **DineReview** is a full-stack web application that empowers diners to discover restaurants, read and write authentic reviews, and make table reservations — all from a single, intuitive platform. Built with **PHP**, **MySQL**, and **Bootstrap 5**, it delivers a responsive, modern dining experience.
 
-> *"Finding and booking a table should be as enjoyable as the meal itself."*
-
 ---
 
 ## ✨ Features
