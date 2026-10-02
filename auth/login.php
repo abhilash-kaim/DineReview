@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
-        // Verify password using plain text comparison
+        // Verify password against the stored hash
         if (password_verify($password, $user['password'])) {
 
             // Store data in SESSION (server-side)
