@@ -27,8 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Store password as plain text
-    // Insert user with plain text password
+    // Hash the password before storing it
+    $hash = password_hash($password, PASSWORD_DEFAULT);	
     $sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("sss", $name, $email, $password);
